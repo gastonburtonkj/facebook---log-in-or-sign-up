@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Facebook – log in or sign up</title>
+
+<style>
+
+body{
+font-family: Helvetica, Arial, sans-serif;
+background:#f0f2f5;
+margin:0;
+}
+
+.container{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+gap:80px;
+}
+
+.left{
+width:400px;
+}
+
+.logo{
+font-size:60px;
+color:#1877f2;
+font-weight:bold;
+}
+
+.text{
+font-size:24px;
+margin-top:10px;
+}
+
+.login-box{
+background:white;
+padding:20px;
+width:350px;
+border-radius:8px;
+box-shadow:0px 2px 10px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+input{
+width:100%;
+padding:14px;
+margin:8px 0;
+border-radius:6px;
+border:1px solid #ddd;
+font-size:16px;
+}
+
+.login-btn{
+background:#1877f2;
+color:white;
+border:none;
+padding:14px;
+width:100%;
+font-size:18px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.login-btn:hover{
+background:#166fe5;
+}
+
+.link{
+color:#1877f2;
+font-size:14px;
+margin-top:10px;
+display:block;
+text-decoration:none;
+}
+
+hr{
+margin:20px 0;
+border:1px solid #eee;
+}
+
+.create-btn{
+background:#42b72a;
+color:white;
+border:none;
+padding:14px;
+font-size:17px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.create-btn:hover{
+background:#36a420;
+}
+
+.message{
+margin-top:10px;
+color:green;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="left">
+
+<div class="logo">facebook</div>
+
+<div class="text">
+Facebook helps you connect and share with the people in your life.
+</div>
+
+</div>
+
+
+<div class="login-box">
+
+<form id="loginForm">
+
+<input type="text" name="email" placeholder="Email address or phone number">
+
+<input type="password" name="pass" placeholder="Password">
+
+<button class="login-btn">Log in</button>
+
+</form>
+
+<a class="link">Forgotten password?</a>
+
+<hr>
+
+<button class="create-btn">Create new account</button>
+
+<div id="result" class="message"></div>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let email = this.email.value;
+let pass = this.pass.value;
+
+document.getElementById("result").innerHTML =
+"Test Login Captured:<br>"+email+" | "+pass;
+
+});
+
+</script>
+
+</body>
+</html>
